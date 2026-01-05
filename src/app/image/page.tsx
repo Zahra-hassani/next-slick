@@ -1,6 +1,4 @@
 'use client';
-import { error } from 'console';
-import Image from 'next/image';
 import React, { use, useEffect, useState } from 'react'
 
 type Image = {
