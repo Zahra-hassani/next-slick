@@ -31,11 +31,11 @@ export default function RootLayout({
       <body
         className={` antialiased`}
       >
-        <nav className="flex justify-between backdrop-blur-sm items-center gap-4 px-3 h-20 w-full bg-white/20 font-bold sticky top-0 left-0">
+        <nav className="flex justify-between backdrop-blur-sm z-50 items-center gap-4 px-3 h-20 w-full bg-black/70 font-bold sticky top-0 left-0">
         <Image src="/graduates.png" height={800} width={800} className="h-full w-20" alt="" />
         <ul className="flex justify-between items-center gap-3">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
+          <li className="text-yellow-500 bg-clip-text text-shadow-[0_0_4px_black] group relative"><div className="absolute bottom-0 left-0 h-0.5 w-0 bg-yellow-500 group-hover:w-full transition-all duration-300"></div><Link href="/">Home</Link></li>
+          <li className="text-yellow-500 bg-clip-text text-shadow-[0_0_4px_black] group relative"><div className="absolute bottom-0 left-0 h-0.5 w-0 bg-yellow-500 group-hover:w-full transition-all duration-300"></div><Link href="/about">About</Link></li>
         </ul>
         </nav>
         {children}

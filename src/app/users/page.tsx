@@ -13,7 +13,7 @@ async function page() {
      const response = await fetch("https://jsonplaceholder.typicode.com/users");
      const data:User[] = await response.json();
   return (
-    <div className='flex justify-center flex-wrap w-full items-center gap-4 p-4'>
+    <div className='grid grid-cols-3 w-full items-center gap-4 p-4'>
       {data.map((user)=>(
         <div key={user.id} className="flex flex-col items-center gap-4 p-3 border rounded shadow">
             <h1 className="font-bold text-2xl text-center">{user.name}</h1>
