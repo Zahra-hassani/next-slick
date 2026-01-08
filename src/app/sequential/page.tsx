@@ -15,12 +15,12 @@ async function page() {
   return (
     <div className='flex flex-col items-center gap-4 p-4'>
       <h1 className='font-bold text-3xl text-white'>All Posts</h1>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 gap-3 text-black">
         {filteredPosts.map((post)=>(
-            <div key={post.id} className="flex flex-col items-center gap-2 rounded-md bg-white">
+            <div key={post.id} className="flex flex-col items-center gap-2 p-4 rounded-md bg-white">
                 <h1 className="font-bold text-3xl">{post.title}</h1>
                 <p>{post.body}</p>
-                <Suspense fallback={<h1><div className='h-7 w-7 border-l-2 border-r-2 border-t-2 rounded-full border-purple-500 animate-spin'></div>Loading...</h1>}>
+                <Suspense fallback={<h1 className='flex gap-1'><div className='h-7 w-7 border-l-2 border-r-2 border-t-2 rounded-full border-purple-500 animate-spin'></div>Loading...</h1>}>
                 <Author userid={post.userId} />
                 </Suspense>
             </div>
